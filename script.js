@@ -1,41 +1,23 @@
-let object = {
-key1: "name",
-key2: 29,
-key3: {
-    friend: true,
-    name: "Gopsz Jakab",
-},
-key4: ["alma", "körte", "barack"]
-}
- /*
-function myFunc (){
-    console.log ("this is my function")
+console.log ("hello world")
+
+function domManipulation (){
+
+const rootElement = document.querySelector('#root')
+console.log (rootElement)
+rootElement.innerHTML = "this is done by dom manipulation"
 }
 
-myFunc()
-
-function greetMe (name) {
-    console.log (`hello ${name}!`)
+function logClick () {
+    console.log ('clicked')
 }
 
-greetMe (undefined)
+let tickCount = 0
 
-function addTwoNumbers (number1, number2) {
-    let sum = number1 + number2
-    console.log ( `the sum of ${number1} and {$number2} is: ${sum}`)
-    return sum
+function logTick () {
+    console.log (`tick ${tickCount}`)
 }
 
-let resultOfAddTwoNumbers = addTwoNumbers(10, 2)
-console.log (`the result of resultOfAddTwoNumbers is: ${resultOfAddTwoNumbers}`) */
+window.addEventListener ('load', domManipulation)
+window.addEventListener ('click', logClick)
 
-function cbExample () {
-    console.log ('I am a callback function')
-}
-
-function funcExample (name, callback) {
-    console.log (`hello ${name}`)
-    callback()
-}
-
-funcExample ("Ricsi", cbExample)
+window.setInterval (logTick, 1000)
