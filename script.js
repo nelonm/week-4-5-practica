@@ -1,24 +1,60 @@
- const arr =  [1, 2, 3, 4, 5]
+const str = "Hello world"
 
-function returnDouble (number) {
-    return number * 2
-}
+console.log (str.substring(0, 3))
+console.log (str. charAt(4))
 
+const strTwo = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
 
-const retunrDouble2 = number =>  number * 2 // arrow function, nem kell zárójel, se return, ha csak 1 paraméter / 1 sor kell
+console.log (strTwo.indexOf("fox"))
+console.log (strTwo.split(" "))
 
-console.log (returnDouble2 (25))
-
-
-  for (let i = 0; i < arr.length; i++) {
-    console.log (returnDouble(arr[i]))
-  }
-/*
-  function logDouble (number){
-      console.log (number*2)
-  }
+console.log (Math.floor(Math.random())*40)
 
 
-  arr.forEach (logDouble) */
+const arr = ["alma", "körte", "uborka"]
 
-  arr.forEach( element => console.log (element*2))
+arr. push("szilva", "birs", "szőlő")
+
+const arrElement = arr.pop()
+
+console.log (arrElement, arr)
+
+console.log (arr.reverse())
+
+console.log (arr.join(" "))
+
+/*for (const key of Object.keys(obj)) {
+    console.log (key, obj[kex])
+} */
+
+const users = [
+    {
+        name: "John Doe",
+        age:33
+    },
+    {
+        name: "Kis Pista",
+        age:26
+    },
+    {
+        name: "Kovács János",
+        age:54
+    },
+    {
+        name: "Gipsz Jakab",
+        age:28
+    }
+]
+
+// const userNames = []
+
+/* const result = users.forEach((user) => {
+    return user.name
+}) */
+
+
+const userNames = users.map((user, index) => {
+    return `The user's name is: ${user.name}, he/she is ${user.age} years old. He/She is at the ${index + 1} place`
+})
+
+console.log(userNames)
